@@ -3,6 +3,7 @@ exports.up = function(knex) {
     return knex.schema.createTable('events', function (table) {
         table.increments();
         table.string('name');
+        table.string('type')
         table.string('description')
         table.string('start')
         table.string('duration')
