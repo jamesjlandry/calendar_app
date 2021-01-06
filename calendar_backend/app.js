@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const knexfile = require('./knexfile')
-const knex = require('knex')
+const knex = require('knex')(knexfile.development)
 const bcrypt =require('brcyptjs')
 const saltRounds = 10
 
